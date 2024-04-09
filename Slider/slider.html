@@ -16,12 +16,23 @@
         var currentimage = 0 ;
 
         document.getElementById("next").onclick = nextPhoto;
-
+        document.getElementById("previous").onclick = previousPhoto;
         function nextPhoto(){
             currentimage++;
+            if (currentimage > myimage.length-1){
+                currentimage = 0;
+                }
+        
             document.getElementById('myimage').src = myimage[currentimage];
 
         }
+        function previousPhoto(){
+            currentimage--;
+        if (currentimage < 0){
+                currentimage = myimage.length-1;
+                }
+                document.getElementById('myimage').src = myimage[currentimage];
+            }
     </script>
 </body>
 </html>
