@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="image1.jpg" alt="slideshow image" id="myimage">
+    </div>
+    <p> <a href="#" id="previous">previous</a>----<a href="#" id="next">next</a></p> 
+
+    <script>
+        var myimage = ["image1.jpg","image2.jpg","image3.jpg","image4.jpg","image5.jpg"];
+        var currentimage = 0 ;
+
+        document.getElementById("next").onclick = nextPhoto;
+
+        function nextPhoto(){
+            currentimage++;
+            document.getElementById('myimage').src = myimage[currentimage];
+
+        }
+    </script>
+</body>
+</html>
